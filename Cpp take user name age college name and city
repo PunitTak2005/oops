@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+
+struct User {
+    std::string name;
+    int age;
+    std::string college;
+    std::string city;
+};
+
+int main() {
+    User user;
+
+    // take input from user
+    std::cout << "Enter your name: ";
+    std::getline(std::cin, user.name);
+
+    std::cout << "Enter your age: ";
+    std::cin >> user.age;
+
+    std::cout << "Enter your college name: ";
+    std::cin.ignore(); // ignore the newline character left in the input buffer
+    std::getline(std::cin, user.college);
+
+    std::cout << "Enter your city: ";
+    std::getline(std::cin, user.city);
+
+    // display output
+    std::cout << "\nYour details:" << std::endl;
+    std::cout << "Name: " << user.name << std::endl;
+    std::cout << "Age: " << user.age << std::endl;
+    std::cout << "College: " << user.college << std::endl;
+    std::cout << "City: " << user.city << std::endl;
+
+    return 0;
+}
