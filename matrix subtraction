@@ -1,0 +1,50 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+// Define a type alias for a matrix
+typedef vector<vector<int>> Matrix;
+
+// Function to subtract two matrices
+Matrix subtractMatrices(const Matrix& matrix1, const Matrix& matrix2) {
+    Matrix result(matrix1.size(), vector<int>(matrix1[0].size()));
+
+    for (int i = 0; i < matrix1.size(); i++) {
+        for (int j = 0; j < matrix1[0].size(); j++) {
+            result[i][j] = matrix1[i][j] - matrix2[i][j];
+        }
+    }
+
+    return result;
+}
+
+// Function to print a matrix
+void printMatrix(const Matrix& matrix) {
+    for (const auto& row : matrix) {
+        for (int elem : row) {
+            cout << elem << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+    // Create two matrices
+    Matrix matrix1 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    Matrix matrix2 = {{10, 11, 12}, {13, 14, 15}, {16, 17, 18}};
+
+    // Subtract the matrices
+    Matrix result = subtractMatrices(matrix1, matrix2);
+
+    // Print the result
+    cout << "Matrix 1:" << endl;
+    printMatrix(matrix1);
+    cout << "Matrix 2:" << endl;
+    printMatrix(matrix2);
+    cout << "Result:" << endl;
+    printMatrix(result);
+
+    return 0;
+}
+
