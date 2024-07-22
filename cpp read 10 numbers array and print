@@ -1,0 +1,20 @@
+#include <iostream>
+
+int main() {
+    int numbers[10]; // declare an array to store 10 integers
+
+    // read 10 numbers from the user
+    for (int i = 0; i < 10; i++) {
+        std::cout << "Enter number " << (i + 1) << ": ";
+        std::cin >> numbers[i];
+    }
+
+    // print the numbers
+    std::cout << "You entered: ";
+    for (int i = 0; i < 10; i++) {
+        std::cout << numbers[i] << " "; // added a space after numbers[i]
+    }
+    std::cout << std::endl; // added this line to insert a newline
+
+    return 0;
+}
