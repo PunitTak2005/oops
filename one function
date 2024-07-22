@@ -1,0 +1,19 @@
+#include <iostream>
+
+class Add_2Numbers {
+public:
+    int n1, n2;
+    void calculate() {
+        std::cout << "Input 2 numbers: ";
+        std::cin >> n1 >> n2;
+        int sum = n1 + n2;
+        std::cout << "Sum of two numbers is: " << sum << std::endl;
+    }
+};
+
+int main() {
+    Add_2Numbers obj1;
+    obj1.calculate();
+    return 0;
+}
+
