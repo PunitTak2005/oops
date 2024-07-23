@@ -1,0 +1,74 @@
+#include <iostream>
+
+class NumberSeries {
+private:
+    int start;
+    int n;
+
+public:
+    NumberSeries(int s, int numTerms) : start(s), n(numTerms) {}
+
+    int seriesCalculation() {
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            int num = start + i;
+            // Odd number series
+            if (num % 2 != 0) {
+                sum += num;
+            }
+            // Even number series
+            else {
+                sum += num;
+            }
+            // Fibonacci series
+            if (i == 0 || i == 1) {
+                sum += num;
+            } else {
+                sum += fib(num);
+            }
+            // Prime number series
+            if (isPrime(num)) {
+                sum += num;
+            }
+        }
+        return sum;
+    }
+
+    int fib(int n) {
+        if (n <= 1) {
+            return n;
+        } else {
+            return fib(n - 1) + fib(n - 2);
+        }
+    }
+
+    bool isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+};
+
+int main() {
+    int startValue;
+    int numTerms;
+
+    std::cout << "Enter starting value: ";
+    std::cin >> startValue;
+    std::cout << "Enter number of terms: ";
+    std::cin >> numTerms;
+
+    NumberSeries series(startValue, numTerms);
+    int sum = series.seriesCalculation();
+
+    std::cout << "Sum of odd, even, Fibonacci, and prime number series: " << sum << std::endl;
+
+    return 0;
+}
+
