@@ -1,0 +1,43 @@
+#include <iostream>
+
+class PrimeSeries {
+private:
+    int start;
+    int n;
+
+public:
+    PrimeSeries(int s, int numTerms) : start(s), n(numTerms) {}
+
+    void generateSeries() {
+        for (int i = 0; i < n; i++) {
+            int num = start + i;
+            bool isPrime = true;
+            for (int j = 2; j * j <= num; j++) {
+                if (num % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                std::cout << num << " ";
+            }
+        }
+        std::cout << std::endl;
+    }
+};
+
+int main() {
+    int startValue;
+    int numTerms;
+
+    std::cout << "Enter starting value: ";
+    std::cin >> startValue;
+    std::cout << "Enter number of terms: ";
+    std::cin >> numTerms;
+
+    PrimeSeries primeSeries(startValue, numTerms);
+    primeSeries.generateSeries();
+
+    return 0;
+}
+
