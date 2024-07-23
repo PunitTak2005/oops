@@ -35,3 +35,40 @@ cin>>a;
 cout<<sizeof(a);
 return 0;
 }
+
+
+
+#include<iostream>
+using namespace std;
+int main(){
+double a;
+cin>>a;
+cout<<sizeof(a);
+return 0;
+}
+
+
+
+#include<iostream>
+using namespace std;
+int main(){
+float a;
+cin>>a;
+cout<<sizeof(a);
+return 0;
+}
+
+
+
+#include<iostream>
+using namespace std;
+int main(){
+char a;
+cin>>a;
+cout<<sizeof(a);
+return 0;
+}
+
+
+
+
