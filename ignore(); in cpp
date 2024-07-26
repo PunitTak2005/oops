@@ -1,0 +1,22 @@
+In C++, ignore() is a function that ignores a specified number of characters from the input stream. It is often used to skip over unwanted characters or to clear the input buffer.
+
+Here's the syntax:
+
+cin.ignore(int n, char c);
+
+Where:
+
+- n is the number of characters to ignore (default is 1).
+- c is the delimiter character (default is EOF, end-of-file).
+
+Example:
+
+cin.ignore(5, '\n'); // ignores the next 5 characters or until a newline is reached
+
+Common use cases:
+
+1. Skipping whitespace: cin.ignore() can be used to skip over whitespace characters, like spaces, tabs, or newlines.
+2. Clearing input buffer: cin.ignore(1000, '\n') can be used to clear the input buffer up to 1000 characters or until a newline is reached.
+3. Ignoring unwanted input: cin.ignore() can be used to ignore unwanted input, like a newline character left in the input buffer after reading an integer.
+
+Remember to include the <iostream> header file to use ignore().
