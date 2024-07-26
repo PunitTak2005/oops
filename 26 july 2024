@@ -1,0 +1,33 @@
+
+#include <iostream>
+using namespace std;
+
+class employee {
+private:
+    int e_no;
+    char e_name[20];
+    float e_sal;
+
+public:
+    void readvalues() {
+        cout << "Enter Emp No : ";
+        cin >> e_no;
+        cout << "Enter Emp Name : ";
+        cin >> e_name;
+        cout << "Enter Emp sal : ";
+        cin >> e_sal;
+    }
+
+    void displayvalues() {
+        cout << "Emp No : " << e_no << endl;
+        cout << "Emp Name : " << e_name << endl;
+        cout << "Emp sal : " << e_sal << endl;
+    }
+};
+
+int main() {
+    employee emp;
+    emp.readvalues();
+    emp.displayvalues();
+    return 0;
+}
