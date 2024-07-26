@@ -1,0 +1,59 @@
+In C++, a structure (also known as a struct) is a user-defined data type that allows you to combine multiple variables of different data types into a single unit. Here's a brief overview:
+
+Declaring a Structure
+
+
+struct StructureName {
+    data_type variable1;
+    data_type variable2;
+    ...
+};
+
+
+Example
+
+
+struct Person {
+    int age;
+    string name;
+    float height;
+};
+
+
+Accessing Structure Members
+
+
+Person person;
+person.age = 30;
+person.name = "John";
+person.height = 5.9;
+
+
+Key Features
+
+1. Members: Variables within a structure are called members.
+2. Data Hiding: Structures can hide their implementation details.
+3. Code Reusability: Structures promote code reusability.
+4. Memory Efficiency: Structures can reduce memory usage.
+
+Types of Structures
+
+1. Simple Structure: A basic structure with members.
+2. Nested Structure: A structure within another structure.
+3. Array of Structures: An array of structures.
+4. Pointer to Structure: A pointer pointing to a structure.
+5. Self-Referential Structure: A structure containing a pointer to itself.
+
+Common Operations
+
+1. Assignment: Assigning values to structure members.
+2. Comparison: Comparing structures using operators.
+3. Input/Output: Reading and writing structures to files or console.
+
+Best Practices
+
+1. Use meaningful names for structures and members.
+2. Keep structures simple and focused.
+3. Use access specifiers (public, private, protected) to control access.
+
+By using structures, you can organize data and functions effectively, making your C++ programs more efficient, readable, and maintainable.
