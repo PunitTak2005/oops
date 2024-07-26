@@ -1,0 +1,61 @@
+Scope resolution in C++ is used to access elements (variables, functions, classes, etc.) that are defined in a different scope. The scope resolution operator is "::".
+
+Here are some examples:
+
+1. Accessing a global variable:
+
+int x = 10; // global variable
+
+void foo() {
+    int x = 20; // local variable
+    cout << x << endl; // prints 20
+    cout << ::x << endl; // prints 10 (accessing global variable)
+}
+
+
+1. Accessing a class member:
+
+class A {
+public:
+    static int x;
+};
+
+int A::x = 10; // defining static member variable
+
+void foo() {
+    cout << A::x << endl; // prints 10
+}
+
+
+1. Accessing a namespace:
+
+namespace myNamespace {
+    void foo() {
+        cout << "Hello!" << endl;
+    }
+}
+
+void bar() {
+    myNamespace::foo(); // calls foo() in myNamespace
+}
+
+
+1. Accessing a class nested within another class:
+
+class A {
+public:
+    class B {
+        public:
+            void foo() {
+                cout << "Hello!" << endl;
+            }
+    };
+};
+
+void bar() {
+    A::B obj;
+    obj.foo(); // calls foo() in class B
+}
+
+
+The scope resolution operator helps to avoid naming conflicts and provides a way to access elements that would otherwise be inaccessible due to scope rules.
