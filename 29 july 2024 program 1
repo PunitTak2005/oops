@@ -1,0 +1,20 @@
+
+#include <iostream>
+
+int main() {
+    int v1 = 5, v2 = 5, v3 = 5, v4 = 5;
+
+    // Increment and decrement operators
+    int result1 = ++v1 + --v2;
+    int result2 = v3++ - --v4;
+
+    // Print results as signed and unsigned
+    std::cout << "Signed Results:" << std::endl;
+    std::cout << "Result 1: " << result1 << std::endl;
+    std::cout << "Result 2: " << result2 << std::endl;
+    std::cout << "Unsigned Results:" << std::endl;
+    std::cout << "Result 1: " << static_cast<unsigned>(result1) << std::endl;
+    std::cout << "Result 2: " << static_cast<unsigned>(result2) << std::endl;
+
+    return 0;
+}
