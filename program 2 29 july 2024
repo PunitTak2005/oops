@@ -1,0 +1,32 @@
+#include <iostream>
+
+class ArithmeticOperations {
+private:
+    int v1, v2, v3, v4;
+
+public:
+    ArithmeticOperations(int val) : v1(val), v2(val), v3(val), v4(val) {}
+
+    void performOperations() {
+        // Increment and decrement operators
+        int result1 = ++v1 + --v2;
+        int result2 = v3++ - --v4;
+
+        // Print results as signed and unsigned
+        std::cout << "Signed Results:" << std::endl;
+        std::cout << "Result 1: " << result1 << std::endl;
+        std::cout << "Result 2: " << result2 << std::endl;
+        std::cout << "Unsigned Results:" << std::endl;
+        std::cout << "Result 1: " << static_cast<unsigned>(result1) << std::endl;
+        std::cout << "Result 2: " << static_cast<unsigned>(result2) << std::endl;
+    }
+};
+
+int main() {
+    ArithmeticOperations ops(5);
+    ops.performOperations();
+
+    return 0;
+}
+
+
