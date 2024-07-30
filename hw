@@ -1,0 +1,7 @@
+#include<iostream>
+using namespace srd;
+int main(){
+	cout<< "Hello World";<<endl;
+	cout<<"New to cpp";
+	return 0;
+}
